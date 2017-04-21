@@ -668,6 +668,7 @@ function db_upload_dir
 #$2 = Local destination file/dir
 function db_download
 {
+    print "DOWNLOAD FUNCTION CALL"
     local SRC=$(normalize_path "$1")
     local DST=$(normalize_path "$2")
 
@@ -762,6 +763,7 @@ function db_download
 #$2 = Local destination file
 function db_download_file
 {
+    
     local FILE_SRC=$(normalize_path "$1")
     local FILE_DST=$(normalize_path "$2")
 
@@ -1447,8 +1449,8 @@ else
     echo "OAUTH_ACCESS_TOKEN=$OAUTH_ACCESS_TOKEN" > "$CONFIG_FILE"
     echo "   The configuration has been saved."
 
-    remove_temp_files
-    exit 0
+    #remove_temp_files
+    # exit 0
 fi
 
 ################
